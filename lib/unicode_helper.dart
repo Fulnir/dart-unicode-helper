@@ -3,8 +3,9 @@
 //
 // @author Edwin Bühler
 //
+// This Implementation is based on the algorithm by the Squeak/Pharo Smalltalk Unicode class.
 
-import 'unicode_helper_charmap.dart';
+import 'unicode_helper_characters.dart';
 
 /*
 Lu Letter, Uppercase
@@ -183,40 +184,39 @@ final Zl = 27;
 final Zp = 28;
 final Zs = 29;
 
-class UnicodeHelper {
-  static bool isLetter(int c) {
-    var cat =  unicodeCharacterCategory[c];
-    if((cat >= Ll) && (cat <= Lu)) {
-      return true;
-    }
-    return false;
+bool isLetter(int c) {
+  var cat =  unicodeCharacterCategory[c];
+  if((cat >= Ll) && (cat <= Lu)) {
+    return true;
   }
-  static bool isUppercase(int c) {
+  return false;
+}
+
+bool isUppercase(int c) {
     var cat =  unicodeCharacterCategory[c];
     if (cat == Lu) {
       return true;
     }
     return false;
   }
-  static bool isLowercase(int c) {
+bool isLowercase(int c) {
     var cat =  unicodeCharacterCategory[c];
     if (cat == Ll) {
       return true;
     }
     return false;
   }
-  static bool isDigit(int c) {
+bool isDigit(int c) {
     var cat =  unicodeCharacterCategory[c];
     if (cat == Nd) {
       return true;
     }
     return false;
   }
-  static bool isCurrency(int c) {
+bool isCurrency(int c) {
     var cat =  unicodeCharacterCategory[c];
     if (cat == Sc) {
       return true;
     }
     return false;
   }
-}
