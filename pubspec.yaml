@@ -5,5 +5,5 @@ description: This library is a workaround for isLetter() isDigit() with unicode 
 homepage: https://github.com/Fulnir/dart-unicode-helper
 environment:
   sdk: '>=0.8.10+6 <2.0.0'
-dependencies:
+dev_dependencies:
   unittest: any
