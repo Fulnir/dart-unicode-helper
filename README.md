@@ -12,14 +12,19 @@ value.
 
 ### Functions
 
+```dart
 bool isLetter(int c);
 bool isUppercase(int c);
 bool isLowercase(int c);
 bool isDigit(int c);
 bool isCurrency(int c);
+bool isSeparator(int c);
+bool isControl(int c);
+```
 
 ### Table codes
 
+```
 Lu Letter, Uppercase
 Ll Letter, Lowercase
 Lt Letter, Titlecase
@@ -50,3 +55,4 @@ Cf Other, Format
 Cs Other, Surrogate
 Co Other, Private Use
 Cn Other, Not Assigned (no characters in the file have this property)
+```

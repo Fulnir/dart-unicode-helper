@@ -72,4 +72,24 @@ main() {
     test("isCurrency('e')", () => expect(isCurrency('e'.runes.toList()[0]), isFalse) );
     test("isCurrency('ア')", () => expect(isCurrency('ア'.runes.toList()[0]), isFalse) );
   });
+  group("isSeparator('')", () {
+    test("isSeparator('A')", () => expect(isSeparator('A'.runes.toList()[0]), isFalse) );
+    test("isSeparator('€')", () => expect(isSeparator('€'.runes.toList()[0]), isFalse) );
+    test("isSeparator('Ü')", () => expect(isSeparator('Ü'.runes.toList()[0]), isFalse) );
+    test("isSeparator(' ') space", () => expect(isSeparator(32), isTrue) );
+    test("isSeparator(' ') cr", () => expect(isSeparator(13), isFalse) );
+    test("isSeparator(' ') tab", () => expect(isSeparator(9), isFalse) );
+    test("isSeparator(' ') line feed", () => expect(isSeparator(10), isFalse) );
+    test("isSeparator(' ') form feed", () => expect(isSeparator(12), isFalse) );
+  });
+  group("isControl('')", () {
+    test("isControl('A')", () => expect(isControl('A'.runes.toList()[0]), isFalse) );
+    test("isControl('€')", () => expect(isControl('€'.runes.toList()[0]), isFalse) );
+    test("isControl('Ü')", () => expect(isControl('Ü'.runes.toList()[0]), isFalse) );
+    test("isControl(' ') space", () => expect(isControl(32), isFalse) );
+    test("isControl(' ') cr", () => expect(isControl(13), isTrue) );
+    test("isControl(' ') tab", () => expect(isControl(9), isTrue) );
+    test("isControl(' ') line feed", () => expect(isControl(10), isTrue) );
+    test("isControl(' ') form feed", () => expect(isControl(12), isTrue) );
+  });
 }

@@ -153,9 +153,9 @@ E0000..E007F; Tags
 F0000..FFFFF; Supplementary Private Use Area-A
 100000..10FFFF; Supplementary Private Use Area-B
  */
+final Cn = 0;
 final Cc = 1;
 final Cf = 2;
-final Cn = 0;
 final Co = 3;
 final Cs = 4;
 final Ll = 5;
@@ -193,30 +193,45 @@ bool isLetter(int c) {
 }
 
 bool isUppercase(int c) {
-    var cat =  unicodeCharacterCategory[c];
-    if (cat == Lu) {
-      return true;
-    }
-    return false;
+  var cat =  unicodeCharacterCategory[c];
+  if (cat == Lu) {
+    return true;
   }
+  return false;
+}
 bool isLowercase(int c) {
-    var cat =  unicodeCharacterCategory[c];
-    if (cat == Ll) {
-      return true;
-    }
-    return false;
+  var cat =  unicodeCharacterCategory[c];
+  if (cat == Ll) {
+    return true;
   }
+  return false;
+}
 bool isDigit(int c) {
-    var cat =  unicodeCharacterCategory[c];
-    if (cat == Nd) {
-      return true;
-    }
-    return false;
+  var cat =  unicodeCharacterCategory[c];
+  if (cat == Nd) {
+    return true;
   }
+  return false;
+}
 bool isCurrency(int c) {
-    var cat =  unicodeCharacterCategory[c];
-    if (cat == Sc) {
-      return true;
-    }
-    return false;
+  var cat =  unicodeCharacterCategory[c];
+  if (cat == Sc) {
+    return true;
   }
+  return false;
+}
+
+bool isSeparator(int c) {
+  var cat =  unicodeCharacterCategory[c];
+  if((cat >= Zl) && (cat <= Zs)) {
+    return true;
+  }
+  return false;
+}
+bool isControl(int c) {
+  var cat =  unicodeCharacterCategory[c];
+  if((cat >= Cc) && (cat <= Cs)) {
+    return true;
+  }
+  return false;
+}
