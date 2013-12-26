@@ -4,4 +4,4 @@
 
 * Add this changelog.md file.
 * Add hop runner file.
-* Add dgh-pages.
+* Add gh-pages.
