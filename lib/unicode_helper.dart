@@ -7,6 +7,24 @@
 
 import 'unicode_helper_characters.dart';
 
+/**
+ * This library is a workaround for non ascii characters.
+ *
+ * Some simple functions like isLetter(int charCode) checking a unicode
+ * table with a given unicode value.
+ *
+ * ### Functions
+ *
+ *     bool isLetter(int c);
+ *     bool isUppercase(int c);
+ *     bool isLowercase(int c);
+ *     bool isDigit(int c);
+ *     bool isCurrency(int c);
+ *     bool isSeparator(int c);
+ *     bool isControl(int c);
+ *
+ */
+
 /*
 Lu Letter, Uppercase
 Ll Letter, Lowercase
@@ -153,6 +171,7 @@ E0000..E007F; Tags
 F0000..FFFFF; Supplementary Private Use Area-A
 100000..10FFFF; Supplementary Private Use Area-B
  */
+
 final Cn = 0;
 final Cc = 1;
 final Cf = 2;
@@ -184,6 +203,7 @@ final Zl = 27;
 final Zp = 28;
 final Zs = 29;
 
+/// Indicates whether the specified Unicode character code is categorized as a Unicode letter.
 bool isLetter(int c) {
   var cat =  unicodeCharacterCategory[c];
   if((cat >= Ll) && (cat <= Lu)) {
@@ -191,7 +211,7 @@ bool isLetter(int c) {
   }
   return false;
 }
-
+/// Indicates whether the specified Unicode character code is categorized as an upper case character.
 bool isUppercase(int c) {
   var cat =  unicodeCharacterCategory[c];
   if (cat == Lu) {
@@ -199,6 +219,7 @@ bool isUppercase(int c) {
   }
   return false;
 }
+/// Indicates whether the specified Unicode character code is categorized as an lower case character.
 bool isLowercase(int c) {
   var cat =  unicodeCharacterCategory[c];
   if (cat == Ll) {
@@ -206,6 +227,7 @@ bool isLowercase(int c) {
   }
   return false;
 }
+/// Indicates whether the specified Unicode character code is categorized as a decimal digit.
 bool isDigit(int c) {
   var cat =  unicodeCharacterCategory[c];
   if (cat == Nd) {
@@ -213,6 +235,7 @@ bool isDigit(int c) {
   }
   return false;
 }
+/// Indicates whether the specified Unicode character code is categorized as a currency symbol.
 bool isCurrency(int c) {
   var cat =  unicodeCharacterCategory[c];
   if (cat == Sc) {
@@ -220,7 +243,9 @@ bool isCurrency(int c) {
   }
   return false;
 }
-
+/// Indicates whether a Unicode character code is categorized as a separator character.
+/// The Unicode standard classifies the characters \u000A (LF), \u000C (FF), and \u000A (CR)
+/// as control characters, not as separator characters.
 bool isSeparator(int c) {
   var cat =  unicodeCharacterCategory[c];
   if((cat >= Zl) && (cat <= Zs)) {
@@ -228,6 +253,7 @@ bool isSeparator(int c) {
   }
   return false;
 }
+/// Indicates whether a specified Unicode character code is categorized as a control character.
 bool isControl(int c) {
   var cat =  unicodeCharacterCategory[c];
   if((cat >= Cc) && (cat <= Cs)) {

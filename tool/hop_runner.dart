@@ -1,8 +1,7 @@
-// $ cd /Users/ed/Documents/Developing/dart/RangedSparseList
+//
 // $ dart tool/hop_runner.dart --color docs --allow-dirty
 //
-library sparse_list.hop_runner;
-
+library unicode_helper.hop_runner;
 
 import 'package:hop/hop.dart';
 import 'package:hop/hop_tasks.dart';
