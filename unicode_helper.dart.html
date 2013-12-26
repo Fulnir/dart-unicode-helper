@@ -397,6 +397,7 @@ final Zs = 29
 bool <strong>isControl</strong>(int c) <a class="anchor-link" href="#isControl"
               title="Permalink to isControl">#</a></h4>
 <div class="doc">
+<p>Indicates whether a specified Unicode character code is categorized as a control character.</p>
 <pre class="source">
 bool isControl(int c) {
  var cat =  unicodeCharacterCategory[c];
@@ -413,6 +414,9 @@ bool isControl(int c) {
 bool <strong>isSeparator</strong>(int c) <a class="anchor-link" href="#isSeparator"
               title="Permalink to isSeparator">#</a></h4>
 <div class="doc">
+<p>Indicates whether a Unicode character code is categorized as a separator character.
+The Unicode standard classifies the characters \u000A (LF), \u000C (FF), and \u000A (CR)
+as control characters, not as separator characters.</p>
 <pre class="source">
 bool isSeparator(int c) {
  var cat =  unicodeCharacterCategory[c];
@@ -429,6 +433,7 @@ bool isSeparator(int c) {
 bool <strong>isCurrency</strong>(int c) <a class="anchor-link" href="#isCurrency"
               title="Permalink to isCurrency">#</a></h4>
 <div class="doc">
+<p>Indicates whether the specified Unicode character code is categorized as a currency symbol.</p>
 <pre class="source">
 bool isCurrency(int c) {
  var cat =  unicodeCharacterCategory[c];
@@ -445,6 +450,7 @@ bool isCurrency(int c) {
 bool <strong>isDigit</strong>(int c) <a class="anchor-link" href="#isDigit"
               title="Permalink to isDigit">#</a></h4>
 <div class="doc">
+<p>Indicates whether the specified Unicode character code is categorized as a decimal digit.</p>
 <pre class="source">
 bool isDigit(int c) {
  var cat =  unicodeCharacterCategory[c];
@@ -461,6 +467,7 @@ bool isDigit(int c) {
 bool <strong>isLowercase</strong>(int c) <a class="anchor-link" href="#isLowercase"
               title="Permalink to isLowercase">#</a></h4>
 <div class="doc">
+<p>Indicates whether the specified Unicode character code is categorized as an lower case character.</p>
 <pre class="source">
 bool isLowercase(int c) {
  var cat =  unicodeCharacterCategory[c];
@@ -477,6 +484,7 @@ bool isLowercase(int c) {
 bool <strong>isUppercase</strong>(int c) <a class="anchor-link" href="#isUppercase"
               title="Permalink to isUppercase">#</a></h4>
 <div class="doc">
+<p>Indicates whether the specified Unicode character code is categorized as an upper case character.</p>
 <pre class="source">
 bool isUppercase(int c) {
  var cat =  unicodeCharacterCategory[c];
@@ -493,6 +501,7 @@ bool isUppercase(int c) {
 bool <strong>isLetter</strong>(int c) <a class="anchor-link" href="#isLetter"
               title="Permalink to isLetter">#</a></h4>
 <div class="doc">
+<p>Indicates whether the specified Unicode character code is categorized as a Unicode letter.</p>
 <pre class="source">
 bool isLetter(int c) {
  var cat =  unicodeCharacterCategory[c];
