@@ -1,11 +1,13 @@
 name: unicode_helper
-version: 0.1.2
+version: 0.2.0
 author: Edwin Bühler <fulnir@gmail.com>
 description: This library is a workaround for isLetter() isDigit() with unicode characters.
 homepage: http://github.com/Fulnir/dart-unicode-helper
 documentation: http://fulnir.github.io/dart-unicode-helper
 environment:
   sdk: '>=1.0.0 <2.0.0'
+dependencies:
+  sparse_list: any
 dev_dependencies:
   hop: any
   unittest: any

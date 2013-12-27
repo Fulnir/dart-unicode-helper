@@ -45,6 +45,10 @@ packages:
     description: source_maps
     source: hosted
     version: "0.9.0"
+  sparse_list:
+    description: sparse_list
+    source: hosted
+    version: "0.1.0"
   stack_trace:
     description: stack_trace
     source: hosted

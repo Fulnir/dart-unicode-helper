@@ -8,7 +8,7 @@ Author: Edwin Bühler <fulnir@gmail.com>
 This library is a workaround for non ascii characters.
 
 Some simple functions like isLetter(int charCode) checking a unicode table with a given unicode
-value.
+value. The unicode table uses the SparseList (which has a file size 0f 26KB instead the uncompressed standard list with 1.8MB).
 
 ### Functions
 
