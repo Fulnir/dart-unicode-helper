@@ -1,9 +1,7 @@
 Dart Unicode Helper
 ---
 
-Copyright (C) 2013 Edwin Bühler. All Rights Reserved.
-
-Author: Edwin Bühler <fulnir@gmail.com>
+[![Build Status](https://drone.io/github.com/Fulnir/dart-unicode-helper/status.png)](https://drone.io/github.com/Fulnir/dart-unicode-helper/latest)
 
 This library is a workaround for non ascii characters.
 
